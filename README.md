@@ -5,7 +5,7 @@ Go版 SDK by trysh
 ```go
 
 func main() {
-	prikey := ``//通信密钥
+    prikey := ``//通信密钥
     mchid := ``商户号
     pj := payjs.New(mchid, prikey)//新建一个引擎
     res, err := pj.CreateTrade(payjs.TradeParam{    //创建一个扫码支付
@@ -15,7 +15,7 @@ func main() {
         Notify_url:   `https://xxx.com/callback`,
     })
     if err != nil {
-        log.Println(`payjs err`, err)
+        log.Println(`payjs CreateTrade err`, err)
         return
     }
     /*返回示例:
